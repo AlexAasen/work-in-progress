@@ -1,0 +1,47 @@
+.contact-page{
+  text-align: center;
+  overflow-y: auto;
+  width: 100%;
+  margin: auto;
+  .icon-connection{
+    font-size: 170px;
+    color: $lines;
+    margin: 100px auto 20px;
+    cursor: default;
+    &:hover{
+      color: $black;
+      transition: all .8s ease;
+    }
+  }
+  .vertical-line{
+    margin: auto;
+  }
+  h2{
+    font-size: 60px;
+    font-weight: 100;
+    margin: 0 0 20px;
+  }
+  .social-menu{
+    display: flex;
+    margin: 40px 0 120px;
+    justify-content: center;
+    .menu-item{
+      border: 3px solid lightgrey;
+      border-radius: 50%;
+      margin: 0 15px;
+      width: 50px;
+      height: 50px;
+      justify-content: center;
+      vertical-align: middle;
+      display: flex;
+      cursor: pointer;
+      &:hover{
+        border-color: $black;
+        @extend .fade-transition;
+      }
+      .icon{
+        margin:auto;
+      }
+    }
+  }
+}

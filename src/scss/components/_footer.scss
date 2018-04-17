@@ -1,0 +1,21 @@
+.footer{
+  background: $black;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  .contact-me{
+    @extend .Josefin-sans;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    border: 3px double grey;
+    padding: 17px 35px;
+    transition: all .8s;
+    margin: auto;
+    cursor: pointer;
+    &:hover{
+      border: 3px solid white;
+      transition: all .8s;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+//Mixins
+@import 'mixins/padding';
+@import 'mixins/margin';
+
+//Base
+@import 'base/colors';
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/icons';
+@import 'base/base';
+
+
+//Components
+@import 'components/menu';
+@import 'components/footer';
+@import 'components/slider';
+
+//Pages
+@import 'pages/contact';
+@import 'pages/about';
+@import 'pages/playground';
+@import 'pages/attributes';
+@import 'pages/attributes/attributes';
+@import 'pages/cv';
+@import 'pages/cv/keyskills';
+
+//ExportGraph
+@import 'components/export-graph';
+
+//projects
+@import 'projects/mastermind/mastermind';
+@import 'projects/pixis/pixis';

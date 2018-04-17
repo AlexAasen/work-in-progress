@@ -1,0 +1,23 @@
+@mixin autoMarginLarge() {
+    margin-left: 40px;
+    transition: all 0.7s;
+
+    @media (min-width: 1400px) {
+        margin-left: 130px;
+        transition: all 0.7s;
+    }
+
+    @media (min-width: 1600px) {
+      margin-left: 250px;
+      transition: all 0.7s;
+    }
+}
+
+@mixin playgroundProjectMargin(){
+  margin: 10px;
+  transition: all 0.7s;
+
+  @media (min-width: 1400px) {
+      margin: 20px;
+  }
+}

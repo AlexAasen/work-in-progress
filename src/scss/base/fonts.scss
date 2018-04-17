@@ -1,0 +1,69 @@
+//fonts
+$Roboto: 'Roboto', sans-serif;
+$Josefin: 'Josefin Sans', sans-serif;
+$Arapey: 'Arapey', serif;
+$OpenSans: 'Open Sans Condensed', sans-serif;
+
+.Roboto {
+  font-family: $Roboto;
+
+}
+.Josefin-sans{
+  font-family: 'Josefin Sans';
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.Open-sans{
+  font-family: $OpenSans;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: $Arapey;
+  margin: 0 0 20px;
+  font-size: 51px;
+  letter-spacing: 2px;
+  line-height: 60px;
+  font-weight: 100;
+}
+
+h3{
+  @extend .Open-sans;
+  margin: 0 0 10px;
+  letter-spacing: 2.5px;
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+h4{
+  @extend .Josefin-sans;
+  font-size: 22px;
+  margin: 0;
+}
+
+p, li {
+  margin: 0;
+  line-height: 27px;
+  font-size: 16px;
+  font-family: 'Josefin Sans';
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.icon {
+  font-family: icons;
+  font-size: 22px;
+  color: $icon-color;
+  &:hover{
+    color: $primary-color;
+    cursor: pointer;
+  }
+}

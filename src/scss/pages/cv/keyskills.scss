@@ -1,0 +1,17 @@
+.cv-entry{
+  .cv-skill{
+    padding: 10px 20px;
+    margin: 0 20px 10px 0;
+    border: 2px solid $turqoise;
+    font-family: 'Josefin Sans';
+  }
+  &.keyskills, .keyskills{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &.career{
+    .cv-skill{
+      margin: 0 5px 10px 0;
+    }
+  }
+}

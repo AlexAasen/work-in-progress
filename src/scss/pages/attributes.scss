@@ -1,0 +1,69 @@
+.attributes-page{
+  overflow-y: auto;
+  flex: 1;
+  .info-block{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 80px;
+    text-align: center;
+    width: 720px;
+    margin: auto;
+    span, h2 {
+      z-index: 2;
+    }
+    .icon-quotes-left{
+      color: $misty-pink;
+      cursor: default;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+  }
+  h3{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .specialized-skills{
+    display: flex;
+    border: 1px solid $light-border;
+    .skill{
+      flex: 1;
+      @include autoPaddingBlock();
+      border-right: 1px solid $light-border;
+      &:last-child{
+        border:none;
+      }
+      p{
+        text-align: center;
+      }
+      .icons{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        .icon{
+          margin: 0 20px;
+          font-size: 50px;
+          cursor: default;
+          &.icon-react {
+            color: $sky-blue;
+          }
+          &.icon-heart {
+            color: $misty-pink;
+          }
+        }
+      }
+    }
+  }
+  .force-diagram {
+    margin: 60px auto;
+    line {
+      stroke: #5d7c91;
+    }
+    .node {
+      pointer-events: all;
+    }
+    text{
+      @extend .Josefin-sans;
+    }
+  }
+
+}

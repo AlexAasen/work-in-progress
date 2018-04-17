@@ -1,0 +1,101 @@
+.page{
+  &.about{
+    background: rgb(249, 248, 244);
+  }
+}
+.about-page{
+  overflow-y: auto;
+  h3{
+    margin: 20px 40px 0;
+  }
+  .about-intro{
+    margin: 10px 40px 0;
+    width: 80%;
+  }
+}
+.blog-content-holder{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: calc(100% - 40px);
+  .instagram-media{
+    transition: all .5s;
+    background: white;
+    box-shadow: 0 0 0px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);
+    margin: 10px 20px 20px;
+    padding:0;
+    height: 550px;
+    max-width: 600px;
+    min-width: calc(33% - 80px);
+    padding: 20px 20px 40px;
+    &:nth-child(2){
+      height: 500px;
+      .img{
+        height: 400px;
+      }
+    }
+    &:nth-child(3){
+      height: 450px;
+      .img{
+        height: 350px;
+      }
+    }
+    @media(max-width: 1600px){
+      min-width: calc(50% - 80px);
+      &:nth-child(3){
+        height: 550px;
+        .img{
+          height: 450px;
+        }
+      }
+    }
+    @media(max-width: 1000px){
+      min-width: calc(100% - 80px);
+    }
+    .img{
+      width: 100%;
+      height: 450px;
+      background-size: cover;
+      background-position: center;
+      &.kitten{
+        background-image: url("/src/img/20160830_162942.jpg");
+      }
+      &.horizon{
+        background-image: url("/src/img/horizon.jpg");
+      }
+      &.master-sword{
+        background-image: url("/src/img/20180413_163018.jpg");
+      }
+      &.desperation{
+        background-image: url("/src/img/desperationsmall_by_alexaasen-d8qj6pp.jpg");
+      }
+      &.link{
+        background-image: url("/src/img/link.jpg");
+      }
+      &.eruption{
+        background-image: url("/src/img/eruption_by_alexaasen-da1ells.jpg");
+      }
+      &.ålesund{
+        background-image: url("/src/img/20171001_125108.jpg");
+      }
+      &.control{
+        background-image: url("/src/img/control_by_alexaasen-d70u76i.jpg");
+      }
+      &.teamvalor{
+        background-image: url("/src/img/teamvalor.jpg");
+      }
+      &.mountains{
+        background-image: url("/src/img/20171003_114948.jpg");
+      }
+    }
+    .paragraph-link{
+      text-decoration: none;
+      @extend .Josefin-sans;
+      font-weight: normal;
+      line-height: 18px;
+      height: 70px;
+      display: block;
+      padding: 30px 0 0;
+    }
+  }
+}

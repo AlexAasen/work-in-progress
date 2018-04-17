@@ -1,0 +1,112 @@
+.cv-page{
+  display: flex;
+  flex: 1;
+  background-image: url("/src/img/cv-background.jpg");
+  background-size: cover;
+  .cv-profile{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    min-width: 300px;
+    height: 550px;
+    h3{
+      margin-bottom: 5px;
+    }
+    h4{
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .profile-image{
+      margin: 20px 40px;
+      .cv-img{
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        border-radius: 50%;
+        background-image: url("/src/img/isaidnofinalsmall_by_alexaasen-d9nbuz2.jpg");
+      }
+    }
+    .profile-ingress{
+      padding: 10px 30px 0;
+    }
+    .profile-contact{
+      padding: 30px 0 0;
+      margin: 40px auto 0;
+      border-top: 1px solid #1d5062;
+      .contact-info{
+        display: flex;
+        .icon{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .cv-menu{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1940;
+    margin: auto;
+    .menu-item{
+      padding: 10px 20px;
+      flex: 1;
+      margin: 0 1px;
+      color: white;
+      background: #1d5062;
+      text-align: center;
+    }
+  }
+
+  .cv-content{
+    overflow-y: auto;
+    height: calc(100% - 128px);
+    .cv-entry{
+      position: relative;
+      margin: 20px 60px;
+      background: white;
+      padding: 20px 30px 30px;
+      h3{
+        width: 100%;
+      }
+      h4{
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      p{
+        margin-bottom: 20px;
+        line-height: 24px;
+      }
+      .tag{
+        width: 6px;
+        height: 40px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 15px;
+      }
+      &.intro{
+        transition: all .3s;
+        height: 120px;
+        &.open{
+          height: 240px;
+        }
+      }
+      .icon-arrow-down{
+        display: block;
+        text-align: center;
+        position: relative;
+        bottom: -10px;
+        color: lightgrey;
+        &:hover{
+          color: $orange;
+        }
+        &.flipped{
+          bottom: 10px;
+          transform: rotate(180deg);
+        }
+      }
+      .carrer-entry:not(:last-child){
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

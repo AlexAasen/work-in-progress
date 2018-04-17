@@ -1,0 +1,64 @@
+.menu{
+  display: flex;
+  padding: 10px 20px 0;
+  transition: all .7s;
+  min-height: 60px;
+  .menu-item{
+    padding: 20px 20px 15px;
+    @extend .Josefin-sans;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    &:not(.active){
+      cursor: pointer;
+      .line{
+        height: 1px;
+        display: block;
+        width: 0%;
+        margin-top: 6px;
+        background: $primary-color;
+      }
+      &:hover{
+        .line{
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+          transition: all .3s ease-in;
+        }
+      }
+    }
+  }
+
+
+  &.attributes, &.mastermind{
+    background: $misty-pink;
+    color: white;
+    padding: 0 20px;
+    transition: all .7s;
+    .menu-item{
+      &:not(.active){
+        &:hover{
+          background: rgb(150, 48, 100);
+          transition: all .5s;
+        }
+      }
+      .line{
+        display: none;
+        &:hover{
+
+        }
+      }
+    }
+  }
+  &.mastermind{
+    background: #262525;
+    .menu-item{
+      &:not(.active){
+        &:hover{
+          background: #000000;
+          transition: all .5s;
+        }
+      }
+    }
+  }
+}
