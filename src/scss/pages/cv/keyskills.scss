@@ -1,9 +1,10 @@
 .cv-entry{
   .cv-skill{
-    padding: 10px 20px;
-    margin: 0 20px 10px 0;
-    border: 2px solid $turqoise;
+    padding: 8px 15px;
+    margin: 0 10px 10px 0;
     font-family: 'Josefin Sans';
+    background: white;
+    color: $cv-blue;
   }
   &.keyskills, .keyskills{
     display: flex;

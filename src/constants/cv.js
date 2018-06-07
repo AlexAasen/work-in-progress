@@ -1,4 +1,18 @@
 module.exports = {
+  specialization: [
+    {
+      skill: "Javascript",
+      value: 90
+    },
+    {
+      skill: "React",
+      value: 90
+    },
+    {
+      skill: "D3",
+      value: 80
+    }
+  ],
   keySkills: [
     "React",
     "Javascript",
@@ -12,9 +26,41 @@ module.exports = {
     "Data visualization",
     "Photoshop"
   ],
+  careerSkills: [
+    {
+      skill: "Javascript, React, D3",
+      value: 10,
+      color: "#a0f1b0"
+    },
+    {
+      skill: "Html, Css, Sass",
+      value: 9,
+      color: "#72e6b9"
+    },
+    {
+      skill: "Html2Canvas, Fuse",
+      value: 5,
+      color: "#62b7a0"
+    },
+    {
+      skill: "Ramda, Underscore",
+      value: 8,
+      color: "#529ba9"
+    },
+    {
+      skill: "Illustration, Design, Photoshop",
+      value: 4,
+      color: "#4b6d86"
+    },
+    {
+      skill: "Sales, Customer service",
+      value: 3,
+      color: "#1d5062"
+    }
+  ],
   career: [
     {
-      timeperiod: [new Date(Date.UTC(2017, 3, 1)), new Date()],
+      timeperiod: [new Date(Date.UTC(2017, 3, 1))],
       role: "Front-end Developer",
       company: "HiQ",
       description: "I work as a consultant at HiQ currently developing the front-end client for Vården i Siffror. The project aims to give both professionals and the general public direct access to the data behind Swedish Healthcare by presenting it in a fun and interesting way." +
@@ -46,26 +92,26 @@ module.exports = {
   education: [
     {
       timeperiod: [new Date(Date.UTC(2015, 0, 1)), new Date(Date.UTC(2017, 0, 1))],
-      school: "C3L Vocational University",
+      school: "url('/src/img/c3l.png')",
       mastery: "Java development",
-      description: "I studied java development at C3L vocational university. We covered topics like the basics of java, advanced java, android development, computer storage, unit tests, technologies of the web and more. A course lasted a few weeks and tested your ability to learn at a quick pace and to then implement what you learned in projects that round up each course."
+      description: "Java, advanced java, android development, javascript & react."
     },
     {
       timeperiod: [new Date(Date.UTC(2011, 0, 1)), new Date(Date.UTC(2014, 0, 1))],
-      school: "Uppsala University",
+      school: "url('/src/img/uu_logo_farg.png')",
       mastery: "Game design",
-      description: "My time at Uppsala university was spent creating games. Each project consisted of 2-3 graphics students pairing up with 2-3 programmers to create something fun. The time spent with each project taught me the importance of each member in a team, and how important it is for me as an individual to be effective in my work and to never miss a deadline. It also made me more flexible as a developer as you often found yourself in situations where you had to rethink your entire game. Either because the game wasn't fun to play or because the team ended up not having enough experience to implement certain features during the given time."
+      description: "Game design, advanced game design, level design, concept art & 3d modeling."
     },
     {
       timeperiod: [new Date(Date.UTC(2007, 0, 1)), new Date(Date.UTC(2010, 0, 1))],
-      school: "Mikael Elias Theoretical Gymnasium",
+      school: "url('/src/img/metg.png')",
       mastery: "Natural science",
-      description: "My main courses were advanced mathematics, chemistry, biology and physics. Additional courses included philosophy, astrophysics, webdesign, c++ and microbiology. My final project was an art project. My goal was to create awareness for the various mental illnesses that might befall teenagers as they grow up and face pressure from the rules and norms of society."
+      description: "Advanced mathematics, chemistry, biology & physics."
     }
   ],
   intro: [
-    "Alex has a background in game design and art. After discovering how creative the development process can be she began studying software development at the Vocational university C3L.",
-    "Alex likes to take on tough challenges and to create creative solutions for difficult problems. She loves learning new frameworks and libraries to be able to create the best user experience for each project. Alex values motivated colleagues, elegant code, as well as intuitive, fun user experiences.",
+    "Alex has a background in game design and art. After discovering how creative the development process can be she began studying software development.",
+    "Alex likes to take on tough challenges. She values motivated colleagues, elegant code, as well as intuitive, fun user experiences.",
     "She's currently specialized in React and D3js, creating interactive visualizations for complex data. As a person she's creative, structured and motivated."
   ],
   interests: [
