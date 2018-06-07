@@ -1,0 +1,139 @@
+@keyframes prevAnim {
+  0%   {
+    opacity: 0;
+    left: -100%;
+  }
+  20%   {
+    opacity: 0.15;
+    left: -80%;
+  }
+  40%   {
+    opacity: 0.3;
+    left: -60%;
+  }
+  60%   {
+    opacity: 0.5;
+    left: -40%;
+  }
+  80%   {
+    opacity: 0.75;
+    left: -20%;
+  }
+  100% {
+    left: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes nextAnim {
+  0%   {
+    opacity: 0;
+    right: -100%;
+  }
+  20%   {
+    opacity: 0.15;
+    right: -80%;
+  }
+  40%   {
+    opacity: 0.3;
+    right: -60%;
+  }
+  60%   {
+    opacity: 0.5;
+    right: -40%;
+  }
+  80%   {
+    opacity: 0.75;
+    right: -20%;
+  }
+  100% {
+    right: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes initialAnim {
+  0%   {
+    opacity: 0;
+  }
+  20%   {
+    opacity: 0.15;
+  }
+  40%   {
+    opacity: 0.3;
+  }
+  60%   {
+    opacity: 0.5;
+  }
+  80%   {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.project-view{
+  display: flex;
+  height: calc(100vh - 73px);
+  flex-direction: column;
+  .active-view-holder{
+    height: calc(100vh - 350px);
+    display: flex;
+    background: #171717;
+    @include autoPaddingBlock();
+    .image-entry {
+      max-height: 100%;
+      margin: auto;
+      max-width: calc(100% - 200px);
+      position: relative;
+      &.prev{
+        animation: prevAnim .3s ease-out;
+      }
+      &.next{
+        animation: nextAnim .3s ease-out;
+      }
+      &.initial{
+        animation: initialAnim .3s ease-out;
+      }
+    }
+    .icon{
+      margin: auto 10px;
+      color: #626667;
+      background: #2f3435;
+      padding: 15px 8px;
+      font-size: 30px;
+      border-radius: 5px;
+      transition: background .2s;
+      cursor: initial;
+      &:hover:not(.disabled){
+        background: #adb7b9;
+        cursor: pointer;
+      }
+    }
+  }
+  .selection-panel{
+    background: #2f3435;
+    height: 200px;
+    padding: 25px;
+    width: calc(100% - 50px);
+    overflow-x: scroll;
+    display: flex;
+    h3, p {
+      color: white;
+    }
+    .image-entry {
+      height: 100%;
+      margin: 0 20px;
+      cursor: pointer;
+      transition: opacity .2s;
+      &:hover{
+        opacity: .6;
+      }
+      &.focus{
+        border: 3px solid #29c4e4;
+        height: calc(100% - 6px);
+      }
+    }
+  }
+}

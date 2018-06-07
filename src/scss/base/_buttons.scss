@@ -1,0 +1,16 @@
+.button-holder{
+  display: flex;
+  button{
+    border: 0;
+    padding: 15px 20px;
+    font-size: 14px;
+    border: 1px solid black;
+    background: white;
+    &:not(.disabled){
+      cursor: pointer;
+      &:hover{
+        background: #e6f3f3;
+      }
+    }
+  }
+}

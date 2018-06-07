@@ -8,6 +8,7 @@
 @import 'base/fonts';
 @import 'base/icons';
 @import 'base/base';
+@import 'base/buttons';
 
 
 //Components
@@ -18,15 +19,32 @@
 //Pages
 @import 'pages/contact';
 @import 'pages/about';
-@import 'pages/playground';
 @import 'pages/attributes';
-@import 'pages/attributes/attributes';
+
+//PLayground
+@import 'pages/playground/grid-1';
+@import 'pages/playground/grid-2';
+@import 'pages/playground';
+
+
+//CV
 @import 'pages/cv';
+@import 'pages/cv/profile';
 @import 'pages/cv/keyskills';
+@import 'pages/cv/intro';
+@import 'pages/cv/career';
+@import 'pages/cv/education';
 
 //ExportGraph
 @import 'components/export-graph';
 
 //projects
-@import 'projects/mastermind/mastermind';
 @import 'projects/pixis/pixis';
+@import 'projects/hots/hots';
+@import 'projects/project-view';
+//games
+@import 'projects/games/mastermind';
+@import 'projects/games/game-of-life';
+//graphs
+@import 'projects/graphs/attributes';
+@import 'projects/graphs/wind-velocity';

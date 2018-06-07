@@ -23,7 +23,14 @@ class AboutMe extends React.Component {
     window.removeEventListener("resize", this.dbRender)
   }
 
+  isUnmounted() {
+    if (!document.getElementById("blog-content")) return true
+    return false
+  }
+
   setWidth(){
+    if (this.isUnmounted()) return
+
     const element = document.getElementById("blog-content")
     this.setState({ width: element && element.offsetWidth })
   }

@@ -1,0 +1,15 @@
+.project-attributes{
+  margin: auto 0;
+  .attributes-container{
+    width: 50%;
+    height: 600px;
+    margin: 90px auto 60px;
+
+    .x-axis{
+      text{
+        transform: rotate(-45deg) translate(-47px, 8px);
+        font-family: 'Josefin Sans';
+      }
+    }
+  }
+}

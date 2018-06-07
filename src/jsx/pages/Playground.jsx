@@ -1,38 +1,34 @@
 const React = require('react')
-const _ = require('underscore')
-const Footer = require('common/Footer.jsx');
+const { map } = require('underscore')
+const { grid1, grid2 } = require('constants/projects')
+const Footer = require('common/Footer.jsx')
 
 class Playground extends React.Component {
+  getEntries(grid){
+    return map(grid, (project, idx) => {
+      const gridStyleClass = "grid-" + idx
+      return(
+        <div key={idx} className={"project " + gridStyleClass} onClick={project.callback.bind(this, this.props.changeActivePage)}>
+          <img className="project-image" src={project.src}></img>
+          <div className="dim-filter"></div>
+          <div className="project-information">
+            <div className="title-background"></div>
+            <h3 className="project-title">{project.title}</h3>
+            <p className="project-description">{project.description}</p>
+          </div>
+        </div>)
+    })
+  }
+
   render(){
     return(
       <div className="playground-page">
         <div className="spacer">
-          <div className="project">
-            <div className="project-image vis"></div>
-            <div className="dim-filter"></div>
-            <div className="project-information">
-              <div className="title-background"></div>
-              <h3 className="project-title">Vården i Siffror</h3>
-              <p className="project-description">Visualizing the statistics behind the healthcare in Sweden in a fun and interesting way</p>
-            </div>
+          <div className="grid-container grid-1">
+            {this.getEntries(grid1)}
           </div>
-          <div className="project" onClick={this.props.changeActivePage.bind(this, "/playground/mastermind")}>
-            <div className="project-image mastermind"></div>
-            <div className="dim-filter"></div>
-            <div className="project-information">
-              <div className="title-background"></div>
-              <h3 className="project-title">Mastermind</h3>
-              <p className="project-description">Remake of the classic boardgame</p>
-            </div>
-          </div>
-          <div className="project" onClick={this.props.changeActivePage.bind(this, "/playground/pixis")}>
-            <div className="project-image pixis"></div>
-            <div className="dim-filter"></div>
-            <div className="project-information">
-              <div className="title-background"></div>
-              <h3 className="project-title">Pixis</h3>
-              <p className="project-description">Draw pixel art and export it as a png</p>
-            </div>
+          <div className="grid-container grid-2">
+            {this.getEntries(grid2)}
           </div>
         </div>
         <Footer changeActivePage={this.props.changeActivePage.bind(this)}/>

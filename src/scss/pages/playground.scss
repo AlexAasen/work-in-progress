@@ -1,22 +1,24 @@
 .playground-page{
   overflow-y: auto;
+  .spacer{
+    justify-content: space-between;
+  }
+  .grid-container{
+    height: 50vw;
+    width: calc(50% - 5px);
+    display: grid;
+    grid-gap: 10px;
+    &.grid-1, &.grid-2{
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
   .project{
-    width: 35%;
-    height: 400px;
+    overflow: hidden;
     position: relative;
-    box-shadow: 1px 1px 0px 1px #8c8c8c;
-    @include playgroundProjectMargin();
+    box-shadow: 2px 3px 5px 0px #888888;
     .project-image{
-      height: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      &.vis{
-        background-image: url("/src/img/VIS_02.png");
-      }
-      &.mastermind{
-        background-image: url("/src/img/mastermind.png");
-      }
+      width: 100%;
     }
     .dim-filter{
       position: absolute;

@@ -38,8 +38,14 @@
   content: "\e903";
   color: #8cc84b;
 }
-.icon-play:before{
+.icon-forward:before{
   content: "\ea1c";
+}
+.icon-backward{
+  transform: rotate(180deg);
+  &:before{
+    content: "\ea1c";
+  }
 }
 .icon-arrow-down:before{
   content: "\ea36";

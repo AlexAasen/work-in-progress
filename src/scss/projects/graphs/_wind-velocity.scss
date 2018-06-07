@@ -1,0 +1,47 @@
+.project-wind-velocity{
+  overflow-y: scroll;
+  .button-holder{
+    margin: 60px 0;
+    .generate-button{
+      margin-left: 15px;
+    }
+  }
+  .graph-holder{
+    display: flex;
+    .graph-labels{
+      margin-top: calc(50vh - 300px);
+      width: 300px;
+      min-width: 200px;
+      .color-obj{
+        display: flex;
+        margin: 15px 0;
+        .color {
+          width: 50px;
+          height: 12px;
+          border: 1px solid black;
+          margin: 2px 15px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    .wind-velocity-container {
+      height: calc(100vh - 77px);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text {
+        font-family: "Helvetica Neue";
+        font-size: 14px;
+      }
+      .wind-angles-labels{
+        text{
+          font-family: "Helvetica Neue";
+          font-size: 26px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

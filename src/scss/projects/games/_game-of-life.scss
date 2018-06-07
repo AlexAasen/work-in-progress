@@ -1,0 +1,32 @@
+.project-game-of-life{
+  width: calc(100% - 150px);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 25px 75px 75px;
+  .button-holder{
+    margin: 0 auto 25px;
+    display: block;
+  }
+  .board-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .row{
+      width: 100%;
+      .box{
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        display: inline-block;
+        background: #1e2e2f;
+        height: calc(100% - 1px);
+        margin-bottom: 1px;
+        transition: background .2s ease-out;
+        &.colored{
+          background: #efd27d;
+        }
+      }
+    }
+  }
+}

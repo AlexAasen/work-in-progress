@@ -1,0 +1,48 @@
+.cv-entry{
+  &.intro{
+    display: flex;
+    background: white;
+    .intro-container{
+      padding: 20px 40px;
+      width: 65%;
+      h3{
+        color: $turqoise;
+        border-bottom: 1px solid $turqoise;
+        padding-bottom: 10px;
+      }
+    }
+    .specialization{
+      width: 35%;
+      padding: 20px 40px;
+      background: $cv-blue;
+      h3{
+        color: white;
+        margin-bottom: 35px;
+      }
+      .skill{
+        margin-bottom: 25px;
+        h4{
+          color: white;
+        }
+        .skill-bar{
+          height: 10px;
+          width: 100%;
+          background: $turqoise;
+          .value{
+            height: 100%;
+            background: white;
+          }
+        }
+      }
+    }
+    @media (max-width: 1600px) {
+      .intro-container{
+        padding: 20px 40px;
+        width: 65%;
+      }
+      .specialization{
+        width: 35%;
+      }
+    }
+  }
+}
