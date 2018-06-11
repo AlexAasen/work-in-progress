@@ -114,17 +114,24 @@
   }
   .selection-panel{
     background: #2f3435;
-    height: 200px;
-    padding: 25px;
-    width: calc(100% - 50px);
+    height: 250px;
     overflow-x: scroll;
     display: flex;
     h3, p {
       color: white;
     }
+    .img-holder{
+      padding: 25px;
+      width: fit-content;
+      &:first-child {
+        padding-left: 50px;
+      }
+      &:last-child{
+        padding-right: 50px;
+      }
+    }
     .image-entry {
       height: 100%;
-      margin: 0 20px;
       cursor: pointer;
       transition: opacity .2s;
       &:hover{

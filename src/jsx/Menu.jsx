@@ -27,6 +27,7 @@ class Menu extends React.Component {
     return(
       <ul className="menu" id="main-nav-menu">
         {this.getMenuItems()}
+        <span className="header-message">Under construction, feel free to browse&nbsp;&nbsp;<span>❤</span></span>
       </ul>
     )
   }

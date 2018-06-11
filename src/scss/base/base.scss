@@ -15,6 +15,7 @@ ul, li{
 .spacer{
   display: flex;
   flex-wrap: wrap;
+  min-height: calc(100% - 395px);
   @include playgroundPadding();
 }
 .content{
