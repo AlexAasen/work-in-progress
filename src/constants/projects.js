@@ -12,21 +12,6 @@ const grid1 = [
     callback: (func) => func("/playground/graphs/attributes")
   },
   {
-    src: "/src/img/c3l.png",
-    title: "Pixis",
-    description: "Draw pixel art and export it as a png",
-    callback: (func) => func("/playground/pixis")
-  },
-  {
-    src: "/src/img/metg.png",
-    title: "NOT REAL",
-    description: "Visualizing attributes in a d3 bar chart",
-    callback: (func) => func("/playground/attributes")
-  }
-]
-
-const grid2 = [
-  {
     src: "/src/img/wind-velocity.png",
     title: "WINDVELOCITY",
     description: "Graph visualizing wind-velocity and direction during a 12hour-span",
@@ -39,28 +24,16 @@ const grid2 = [
     callback: (func) => func("/playground/games/game-of-life")
   },
   {
-    src: "/src/img/c3l.png",
-    title: "NOT REAL",
-    description: "Draw pixel art and export it as a png",
-    callback: (func) => func("/playground/pixis")
-  },
-  {
-    src: "/src/img/metg.png",
-    title: "Spaceshooter",
-    description: "Spaceshooter made with Phaser",
-    callback: (func) => func("/playground/games/spaceshooter")
+    src: "/src/img/mastermind.png",
+    title: "Mastermind",
+    description: "Remake of the classic boardgame",
+    callback: (func) => func("/playground/games/mastermind")
   },
   {
     src: "/src/img/isaidnofinalsmall_by_alexaasen-d9nbuz2.jpg",
     title: "Illustration",
     description: "Watercolors going digital",
     callback: (func) => func("/playground/illustration")
-  },
-  {
-    src: "/src/img/mastermind.png",
-    title: "Mastermind",
-    description: "Remake of the classic boardgame",
-    callback: (func) => func("/playground/games/mastermind")
   }
 ]
 
@@ -90,6 +63,5 @@ const illustrationImgs = [
 module.exports = {
   visImgs,
   illustrationImgs,
-  grid1,
-  grid2
+  grid1
 }

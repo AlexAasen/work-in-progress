@@ -1,6 +1,6 @@
 const React = require('react')
 const { map } = require('underscore')
-const { grid1, grid2 } = require('constants/projects')
+const { grid1 } = require('constants/projects')
 const Footer = require('common/Footer.jsx')
 
 class Playground extends React.Component {
@@ -26,9 +26,6 @@ class Playground extends React.Component {
         <div className="spacer">
           <div className="grid-container grid-1">
             {this.getEntries(grid1)}
-          </div>
-          <div className="grid-container grid-2">
-            {this.getEntries(grid2)}
           </div>
         </div>
         <Footer changeActivePage={this.props.changeActivePage.bind(this)}/>
