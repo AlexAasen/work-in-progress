@@ -1,10 +1,10 @@
 var webpack = require('webpack');
 var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-var BUILD_DIR = path.resolve(__dirname, 'dist/js/');
-var APP_DIR = path.resolve(__dirname, 'src/');
-var CSS_DIR = path.resolve(__dirname, 'src/scss/');
+var BUILD_DIR = path.resolve(__dirname, 'dist/js/')
+var APP_DIR = path.resolve(__dirname, 'src/')
+var CSS_DIR = path.resolve(__dirname, 'src/scss/')
 
 var config = {
   entry: [APP_DIR + '/jsx/index.jsx', CSS_DIR + '/main.scss'],

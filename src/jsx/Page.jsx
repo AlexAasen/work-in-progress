@@ -9,6 +9,7 @@ const Playground = require('./pages/Playground.jsx')
 const AttributesProject = require('./projects/graphs/Attributes.jsx')
 const Mastermind = require('./projects/games/mastermind/Mastermind.jsx')
 const GameOfLife = require('./projects/games/gameOfLife/GameOfLife.jsx')
+const Spaceshooter = require('./projects/games/spaceshooter/Spaceshooter.jsx')
 const Pixis = require('./projects/pixis/Pixis.jsx')
 const Vis = require('./projects/ViS.jsx')
 const Illustration = require('./projects/Illustration.jsx')
@@ -74,6 +75,10 @@ class Page extends React.Component {
       break
       case "/playground/games/mastermind" : {
         activePage = <Mastermind changeActivePage={this.changeActivePage}/>
+      }
+      break
+      case "/playground/games/spaceshooter" : {
+        activePage = <Spaceshooter changeActivePage={this.changeActivePage}/>
       }
       break
       case "/playground/games/game-of-life" : {

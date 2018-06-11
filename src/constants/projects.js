@@ -46,9 +46,9 @@ const grid2 = [
   },
   {
     src: "/src/img/metg.png",
-    title: "NOT REAL",
-    description: "Visualizing attributes in a d3 bar chart",
-    callback: (func) => func("/playground/attributes")
+    title: "Spaceshooter",
+    description: "Spaceshooter made with Phaser",
+    callback: (func) => func("/playground/games/spaceshooter")
   },
   {
     src: "/src/img/isaidnofinalsmall_by_alexaasen-d9nbuz2.jpg",
