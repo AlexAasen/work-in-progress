@@ -53,6 +53,7 @@ class Page extends React.Component {
         activePage = <Cv changeActivePage={this.changeActivePage}/>
       }
       break
+      case "/" :
       case "/playground" : {
         activePage = <Playground changeActivePage={this.changeActivePage}/>
       }
