@@ -10,17 +10,17 @@ class AboutMe extends React.Component {
     this.state = {
       width: null
     }
-    const boundRender = this.setWidth.bind(this, width => this.state.width = width)
-    this.dbRender = debounce(boundRender, reRenderDebounce)
+
+    this.setWidth = this.setWidth.bind(this)
   }
 
   componentDidMount(){
-    window.addEventListener("resize", this.dbRender)
+    window.addEventListener("resize", this.setWidth)
     this.setWidth()
   }
 
   componentWillUnMount(){
-    window.removeEventListener("resize", this.dbRender)
+    window.removeEventListener("resize", this.setWidth)
   }
 
   isUnmounted() {

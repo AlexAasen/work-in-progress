@@ -1,8 +1,8 @@
 const React = require('react')
 const d3 = require('d3')
-const { debounce, map } = require('underscore')
+const { map } = require('underscore')
 const { attributes } = require('constants/attributes.js')
-const { reRenderDebounce, animationSpeed } = require('constants/base.js')
+const { animationSpeed } = require('constants/base.js')
 
 const margin = {
   bottom: 100,
@@ -10,25 +10,23 @@ const margin = {
 }
 
 class Attributes extends React.Component {
-  constructor(props){
-    super(props)
-    const boundRender = this.renderGraph.bind(this, width => this.lastWidth = width)
-    this.dbRender = debounce(boundRender, reRenderDebounce)
-
-    this.lastWidth = null
+  constructor(){
+    super()
+    this.renderGraph = this.renderGraph.bind(this)
   }
+
   componentDidMount(){
-    window.addEventListener("resize", this.dbRender)
+    window.addEventListener("resize", this.renderGraph)
     this.initGraph()
   }
 
   componentWillUnMount(){
-    window.removeEventListener("resize", this.dbRender)
+    window.removeEventListener("resize", this.renderGraph)
   }
 
-  componentDidUpdate(prevProps){
-    if(decideOnUpdate(this.refs["attributes-container"], this.lastWidth))
-      this.dbRender()
+  isUnmounted() {
+    if (!this.refs["attributes-container"]) return true
+    return false
   }
 
   initGraph(){
@@ -85,6 +83,7 @@ class Attributes extends React.Component {
       .duration(animationSpeed)
       .style("opacity", 1)
     }
+
     const selection = svg.select('.chart-data')
       .selectAll('.bar')
       .data(attributes)
@@ -113,7 +112,10 @@ class Attributes extends React.Component {
   }
 
   renderGraph(){
+    if (this.isUnmounted()) return
+
     const container = this.refs["attributes-container"]
+
     const width = container.offsetWidth
     const height = container.offsetHeight
 

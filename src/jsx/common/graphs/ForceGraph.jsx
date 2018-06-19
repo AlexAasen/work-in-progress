@@ -127,36 +127,38 @@ class ForceGraph extends React.Component {
         }
 
     function tick() {
+      if(location.pathname !== '/skills') return
+
       svg.selectAll("text")
-      .attr("dy", 5)
-      .attr("x", (d, i) => {
-        if(d.data.type === "group"){return 0}
-        return (d.x > (width/2)) ? 10 : -10
-      })
-      .style("text-anchor", (d, i) => {
-        if(d.data.type === "group"){return "middle"}
-        return ((d.x > (width/2)) ? "start" : "end")
-      })
+        .attr("dy", 5)
+        .attr("x", (d, i) => {
+          if(d.data.type === "group"){return 0}
+          return (d.x > (width/2)) ? 10 : -10
+        })
+        .style("text-anchor", (d, i) => {
+          if(d.data.type === "group"){return "middle"}
+          return ((d.x > (width/2)) ? "start" : "end")
+        })
 
       svg.selectAll("rect")
-      .attr("x", (d, i) => {
-        var bbox = document.getElementById("text-"+i).getBBox()
-        if(d.data.type === "group"){return (d.x > (width/2)) ? (0 - ((bbox.width/2) + 10)) : -(((bbox.width/2) + 10))}
-        return (d.x > (width/2)) ? 0 : -((bbox.width + 20))
-      })
-      .attr("y", -15)
-      .attr("width", (d, i) => {
-        if(d.data.type === "role"){return}
-        var bbox = document.getElementById("text-"+i).getBBox()
-        return (bbox.width + 20)
-      })
-      .style("stroke", (d, i) => {
-        const colorObj = colors[d.data.type]
-        if(d.data.type === "skill"){
-          return colorObj[i % colorObj.length]
-        }
-        return colorObj
-      })
+        .attr("x", (d, i) => {
+          var bbox = document.getElementById("text-"+i).getBBox()
+          if(d.data.type === "group"){return (d.x > (width/2)) ? (0 - ((bbox.width/2) + 10)) : -(((bbox.width/2) + 10))}
+          return (d.x > (width/2)) ? 0 : -((bbox.width + 20))
+        })
+        .attr("y", -15)
+        .attr("width", (d, i) => {
+          if(d.data.type === "role"){return}
+          var bbox = document.getElementById("text-"+i).getBBox()
+          return (bbox.width + 20)
+        })
+        .style("stroke", (d, i) => {
+          const colorObj = colors[d.data.type]
+          if(d.data.type === "skill"){
+            return colorObj[i % colorObj.length]
+          }
+          return colorObj
+        })
 
       linkSvg
       .attr("x1", (d) => { return d.source.x})
