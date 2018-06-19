@@ -3,15 +3,6 @@
   .spacer{
     justify-content: space-between;
   }
-  .grid-container{
-    height: 50vw;
-    display: grid;
-    grid-gap: 10px;
-    &.grid-1, &.grid-2{
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-    }
-  }
   .project{
     overflow: hidden;
     position: relative;
