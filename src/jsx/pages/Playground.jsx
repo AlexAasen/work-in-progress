@@ -1,6 +1,9 @@
 const React = require('react')
+const { Link } = require('react-router-dom')
 const { map } = require('underscore')
+
 const { grid1 } = require('constants/projects')
+
 const Footer = require('common/Footer.jsx')
 
 class Playground extends React.Component {
@@ -8,7 +11,9 @@ class Playground extends React.Component {
     return map(grid, (project, idx) => {
       const gridStyleClass = "grid-" + idx
       return(
-        <div key={idx} className={"project " + gridStyleClass} onClick={project.callback.bind(this, this.props.changeActivePage)}>
+        <Link to={project.link}
+          key={idx}
+          className={"project " + gridStyleClass}>
           <img className="project-image" src={project.src}></img>
           <div className="dim-filter"></div>
           <div className="project-information">
@@ -16,7 +21,7 @@ class Playground extends React.Component {
             <h3 className="project-title">{project.title}</h3>
             <p className="project-description">{project.description}</p>
           </div>
-        </div>)
+        </Link>)
     })
   }
 
@@ -28,7 +33,7 @@ class Playground extends React.Component {
             {this.getEntries(grid1)}
           </div>
         </div>
-        <Footer changeActivePage={this.props.changeActivePage.bind(this)}/>
+        <Footer />
       </div>)
   }
 }

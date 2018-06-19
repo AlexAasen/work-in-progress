@@ -76,7 +76,7 @@ class AboutMe extends React.Component {
         <div id="blog-content" ref="blog-content" className="blog-content-holder">
           {this.getEntries()}
         </div>
-        <Footer changeActivePage={this.props.changeActivePage.bind(this)}/>
+        <Footer />
       </div>
     )
   }

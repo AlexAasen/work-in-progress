@@ -1,21 +1,21 @@
-var React = require('react');
+const React = require('react');
+const { Link } = require('react-router-dom')
 
 class Footer extends React.Component {
   changePage(){
-    var element = document.getElementById("main-nav-menu");
-    element.setAttribute("class", "menu");
-    this.props.changeActivePage("/contact");
+    const element = document.getElementById("main-nav-menu")
+    element.setAttribute("class", "menu")
+    this.props.changeActivePage("/contact")
   }
 
   render(){
     return(
       <div className="footer">
-        <div className="contact-me" onClick={this.changePage.bind(this)}>
+        <Link className="contact-me" to='/contact'>
           Contact me
-        </div>
-      </div>
-    )
+        </Link>
+      </div>)
   }
 }
 
-module.exports = Footer;
+module.exports = Footer

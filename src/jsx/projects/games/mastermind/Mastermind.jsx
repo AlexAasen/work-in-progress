@@ -22,8 +22,13 @@ class Mastermind extends React.Component {
   }
 
   componentDidMount(){
-    var element = document.getElementById("main-nav-menu")
-    element.setAttribute("class", "menu mastermind")
+    const element = document.getElementById("page-holder")
+    element.classList.add("mastermind")
+  }
+
+  componentWillUnmount(){
+    const element = document.getElementById("page-holder")
+    element.classList.remove("mastermind")
   }
 
   init(){
@@ -145,7 +150,7 @@ class Mastermind extends React.Component {
           </div>
           {this.gameOver()}
         </div>
-        <Footer changeActivePage={changeActivePage}/>
+        <Footer />
       </div>)
   }
 }

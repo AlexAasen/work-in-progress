@@ -3,37 +3,37 @@ const grid1 = [
     src: "/src/img/VIS_02.png",
     title: "Vården i Siffror",
     description: "Visualizing the statistics behind the healthcare in Sweden in a fun and interesting way",
-    callback: (func) => func("/playground/vis")
+    link: "/playground/vis"
   },
   {
     src: "/src/img/Capture.png",
     title: "Attributes bar chart",
     description: "Visualizing attributes in a d3 bar chart",
-    callback: (func) => func("/playground/graphs/attributes")
+    link: "/playground/graphs/attributes"
   },
   {
     src: "/src/img/wind-velocity.png",
     title: "WINDVELOCITY",
     description: "Graph visualizing wind-velocity and direction during a 12hour-span",
-    callback: (func) => func("/playground/graphs/windvelocity")
+    link: "/playground/graphs/windvelocity"
   },
   {
     src: "/src/img/gameoflife.png",
     title: "Game of life",
     description: "Simulation game",
-    callback: (func) => func("/playground/games/game-of-life")
+    link: "/playground/games/game-of-life"
   },
   {
     src: "/src/img/mastermind.png",
     title: "Mastermind",
     description: "Remake of the classic boardgame",
-    callback: (func) => func("/playground/games/mastermind")
+    link: "/playground/games/mastermind"
   },
   {
     src: "/src/img/isaidnofinalsmall_by_alexaasen-d9nbuz2.jpg",
     title: "Illustration",
     description: "Watercolors going digital",
-    callback: (func) => func("/playground/illustration")
+    link: "/playground/illustration"
   }
 ]
 

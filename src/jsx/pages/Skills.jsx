@@ -1,5 +1,5 @@
 const React = require('react')
-const _ = require('underscore')
+const { map } = require('underscore')
 const { specializedSkills } = require('constants/skills.js')
 const ForceGraph = require('graphs/ForceGraph.jsx')
 const Footer = require('common/Footer.jsx')
@@ -11,22 +11,24 @@ class Skills extends React.Component {
 
   checkScrollTop(){
     if(document.getElementById("attributes-page").scrollTop > 0){
-      var element = document.getElementById("main-nav-menu")
-      element.setAttribute("class", "menu attributes")
+      const element = document.getElementById("page-holder")
+      element.classList.add("attributes")
     }
     else{
-      var element = document.getElementById("main-nav-menu")
-      element.setAttribute("class", "menu")
+      const element = document.getElementById("page-holder")
+      element.classList.remove("attributes")
     }
   }
 
   componentWillUnmount(){
-    document.getElementById("attributes-page").removeEventListener("scroll", this.checkScrollTop.bind(this));
+    document.getElementById("attributes-page").removeEventListener("scroll", this.checkScrollTop.bind(this))
+    const element = document.getElementById("page-holder")
+    element.classList.remove("attributes")
   }
 
 
   getIcons(iconList){
-    return _.map(iconList, (icon, idx) => {
+    return map(iconList, (icon, idx) => {
       return (
         <span key={idx} className={icon}></span>
       )
@@ -34,7 +36,7 @@ class Skills extends React.Component {
   }
 
   getSpecializedSkills(){
-    return _.map(specializedSkills, (skill, idx) => {
+    return map(specializedSkills, (skill, idx) => {
       return (
         <li key={idx} className="skill">
           <ul className="icons">
@@ -60,10 +62,9 @@ class Skills extends React.Component {
           {this.getSpecializedSkills()}
         </ul>
         <ForceGraph />
-        <Footer changeActivePage={this.props.changeActivePage.bind(this)}/>
-      </div>
-    )
+        <Footer />
+      </div>)
   }
 }
 
-module.exports = Skills;
+module.exports = Skills

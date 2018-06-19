@@ -3,11 +3,13 @@
   padding: 10px 20px 0;
   transition: all .7s;
   min-height: 60px;
+  background: white;
   .menu-item{
     padding: 20px 20px 15px;
     @extend .Josefin-sans;
     text-transform: uppercase;
     font-size: 13px;
+    color: $primary-color;
     font-weight: bold;
     &:not(.active){
       cursor: pointer;
@@ -28,48 +30,62 @@
       }
     }
   }
+  .header-message{
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-family: Caveat;
+    font-size: 24px;
+    span{
+      color: $misty-pink;
+    }
+  }
+}
 
-
-  &.attributes, &.mastermind{
+.attributes{
+  .menu{
     background: $misty-pink;
-    color: white;
-    padding: 0 20px;
-    transition: all .7s;
     .menu-item{
       &:not(.active){
         &:hover{
           background: rgb(150, 48, 100);
+        }
+      }
+    }
+  }
+}
+.mastermind{
+  .menu{
+    background: #262525;
+    .menu-item{
+      &:not(.active){
+        &:hover{
+          background: #000000;
+        }
+      }
+    }
+  }
+}
+.attributes, .mastermind{
+  .menu{
+    padding: 0 20px;
+    transition: all .7s;
+    .header-message{
+      color: white;
+    }
+    .menu-item{
+      padding: 24px 20px 15px;
+      color: white;
+      &:not(.active){
+        &:hover{
           transition: all .5s;
         }
       }
       .line{
         display: none;
         &:hover{
-
         }
       }
-    }
-  }
-  &.mastermind{
-    background: #262525;
-    .menu-item{
-      &:not(.active){
-        &:hover{
-          background: #000000;
-          transition: all .5s;
-        }
-      }
-    }
-  }
-
-  .header-message{
-    position: absolute;
-    right: 35px;
-    top: 20px;
-    font-family: Caveat;
-    font-size: 24px;
-    span{
-      color: $misty-pink;
     }
   }
 }
