@@ -10,13 +10,6 @@ const colors = {
 }
 
 class ForceGraph extends React.Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      height: 600
-    }
-  }
-
   componentDidMount(){
     this.initializeGraph()
   }
@@ -36,12 +29,12 @@ class ForceGraph extends React.Component {
   }
 
   initializeGraph(){
-    const { height } = this.state
     const forceRoot = d3.hierarchy(skills)
-    const width = this.refs.container.offsetWidth
+    const height = 600
+    const width = 900
 
     const svg = d3.select("#force-diagram")
-                 .attr("preserveAspectRatio", "xMidYMin meet")
+                 .attr("preserveAspectRatio", "xMidYMax meet")
                  .attr("viewBox", "0 0 " + width + " " + height)
                  .style("max-height", height)
                  .append("g")
