@@ -13,7 +13,7 @@ const grid1 = [
   },
   {
     src: "/src/img/wind-velocity.png",
-    title: "WINDVELOCITY",
+    title: "Wind velocity",
     description: "Graph visualizing wind-velocity and direction during a 12hour-span",
     link: "/playground/graphs/windvelocity"
   },

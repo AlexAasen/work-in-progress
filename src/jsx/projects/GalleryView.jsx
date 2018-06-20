@@ -35,9 +35,8 @@ class GalleryView extends React.Component {
     return map(list, (item, idx) => {
       const styleClass = activeIdx === idx ? 'focus' : ''
 
-      return <div key={idx} className="img-holder">
+      return <div key={idx} className="img-holder" onClick={this.updateState.bind(this, idx)}>
         <img className={"image-entry " + styleClass}
-          onClick={this.updateState.bind(this, idx)}
           src={item}></img>
       </div>
     })
