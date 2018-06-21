@@ -33,12 +33,12 @@ function readExcel(file, callback){
   var reader = new FileReader()
   console.log(file)
   reader.onload = function(e) {
-    var data = e.target.result;
+    var data = e.target.result
     var workbook = XLSX.read(data, {
       type: 'binary'
     })
 
-    var result;
+    var result
     var sheet_name_list = workbook.SheetNames
     _.each(sheet_name_list, (sheet) => {
       var sheetResult = XLSX.utils.sheet_to_csv(workbook.Sheets[sheet], {raw: true})

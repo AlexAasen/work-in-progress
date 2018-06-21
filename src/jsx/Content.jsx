@@ -7,13 +7,16 @@ const Skills = require('./pages/Skills.jsx')
 const Cv = require('./pages/cv/Cv.jsx')
 
 const Playground = require('./pages/Playground.jsx')
-const AttributesProject = require('./projects/graphs/Attributes.jsx')
 const Mastermind = require('./projects/games/mastermind/Mastermind.jsx')
 const GameOfLife = require('./projects/games/gameOfLife/GameOfLife.jsx')
+const Memory = require('./projects/games/memory/Memory.jsx')
 const Spaceshooter = require('./projects/games/spaceshooter/Spaceshooter.jsx')
+
 const Pixis = require('./projects/pixis/Pixis.jsx')
 const Vis = require('./projects/ViS.jsx')
 const Illustration = require('./projects/Illustration.jsx')
+
+const Attributes = require('./projects/graphs/Attributes.jsx') 
 const WindVelocityGraph = require('./projects/graphs/WindVelocityGraph.jsx')
 
 class Content extends React.Component {
@@ -26,14 +29,15 @@ class Content extends React.Component {
         <Route path='/skills' component={Skills}/>
         <Route path='/cv' component={Cv}/>
         <Route exact path='/playground' component={Playground}/>
-        <Route exact path='/playground/graphs/attributes' component={AttributesProject}/>
         <Route exact path='/playground/vis' component={Vis}/>
         <Route exact path='/playground/illustration' component={Illustration}/>
+        <Route exact path='/playground/pixis' component={Pixis}/>
+        <Route exact path='/playground/graphs/attributes' component={Attributes}/>
         <Route exact path='/playground/graphs/windvelocity' component={WindVelocityGraph}/>
         <Route exact path='/playground/games/mastermind' component={Mastermind}/>
         <Route exact path='/playground/games/spaceshooter' component={Spaceshooter}/>
         <Route exact path='/playground/games/game-of-life' component={GameOfLife}/>
-        <Route exact path='/playground/pixis' component={Pixis}/>
+        <Route exact path='/playground/games/memory' component={Memory}/>
       </Switch>)
   }
 }

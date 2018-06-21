@@ -1,0 +1,63 @@
+.project-memory{
+  @include autoPaddingBlock();
+  .button-holder{
+    margin-bottom: 40px;
+    button{
+      margin: 0 auto;
+    }
+  }
+  .board-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 740px;
+    margin: 0 auto;
+    transition: all .3s ease-out;
+    .board-entry{
+      display: flex;
+      margin: 10px;
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      border-radius: 10px;
+      transition: all .3s ease-out;
+      .entry{
+        margin:auto;
+        font-size: 30px;
+        transition: all .3s ease-out;
+      }
+
+      &.hidden{
+        background: #565667;
+        cursor: pointer;
+        &:hover{
+          background: #3b3b46;
+        }
+
+      }
+      &.solved{
+        opacity: 0;
+      }
+    }
+    .gameover{
+      p{
+        margin: 150px auto 0;
+        font-size: 45px;
+        line-height: 50px;
+        &:last-child{
+          margin-top: 20px;
+        }
+      }
+    }
+
+    @media (max-width: 850px){
+      width: 411px;
+      .board-entry{
+        width: 60px;
+        height: 60px;
+        .entry{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

@@ -34,6 +34,12 @@ const grid1 = [
     title: "Illustration",
     description: "Watercolors going digital",
     link: "/playground/illustration"
+  },
+  {
+    src: "/src/img/memory.png",
+    title: "Memory",
+    description: "Practise your memory in this traditional memory game",
+    link: "/playground/games/memory"
   }
 ]
 
