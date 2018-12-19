@@ -1,5 +1,4 @@
 const React = require('react')
-const { map } = require('underscore')
 const KeySkills = require('./KeySkills.jsx')
 const CareerHistory = require('./CareerHistory.jsx')
 const Profile = require('./Profile.jsx')

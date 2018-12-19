@@ -1,0 +1,37 @@
+.coloring-book-container{
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  .color-area{
+    display: flex;
+    #svg_result{
+      width: 1000px;
+      height: 1000px;
+      path{
+        cursor: pointer;
+        transition: fill .2s;
+      }
+    }
+    #original svg{
+      display: none;
+    }
+  }
+  .color-selection{
+    display: flex;
+    margin-bottom: 20px;
+    .color{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 0 20px 0 0;
+      &.selected{
+        border: 4px solid lightblue;
+        width: 22px;
+        height: 22px;
+      }
+      &:not(.selected){
+        cursor: pointer;
+      }
+    }
+  }
+}

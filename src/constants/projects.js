@@ -40,6 +40,18 @@ const grid1 = [
     title: "Memory",
     description: "Practise your memory in this traditional memory game",
     link: "/playground/games/memory"
+  },
+  {
+    src: "/src/img/memory.png",
+    title: "Population",
+    description: "Practise your memory in this traditional memory game",
+    link: "/playground/graphs/population"
+  },
+  {
+    src: "/src/img/Capture.png",
+    title: "Coloring book",
+    description: "Coloring dream",
+    link: "/playground/random/coloring-book"
   }
 ]
 

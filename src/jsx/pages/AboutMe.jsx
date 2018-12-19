@@ -1,8 +1,7 @@
 const React = require('react')
-const { debounce, map } = require('underscore')
+const { map } = require('underscore')
 const Footer = require('common/Footer.jsx')
 const { entries } = require('constants/hobbies.js')
-const { reRenderDebounce } = require('constants/base.js')
 
 class AboutMe extends React.Component {
   constructor(props){
@@ -39,7 +38,7 @@ class AboutMe extends React.Component {
     const { width } = this.state
 
     return map(entries, (entry, idx) => {
-      const { className, alt, description } = entry
+      const { className, description } = entry
       let marginTop = 10
 
       if((width > 983) && (width <= 1583)){
@@ -50,7 +49,7 @@ class AboutMe extends React.Component {
       else if(width > 1583){
         marginTop = ((idx !== 0) && (idx !== 1) && (idx !== 2) &&
         ((idx - 4) % 3 === 0)) ? -40 :
-        ((idx !== 0)  && (idx !== 2) && ((idx + 1) % 3 === 0) ? -90 : 10)
+          ((idx !== 0) && (idx !== 2) && ((idx + 1) % 3 === 0) ? -90 : 10)
       }
 
       return(

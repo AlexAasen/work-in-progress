@@ -1,6 +1,5 @@
 const React = require('react')
 const diff = require('deep-diff')
-const clone = require('clone')
 const { map, range, each, reject, flatten, contains } = require('underscore')
 const { getRandom } = require('js/utils')
 
@@ -25,9 +24,9 @@ class GameOfLife extends React.Component {
   }
 
   componentWillUnmount() {
-     this.componentCleanup()
-     window.removeEventListener('beforeunload', this.componentCleanup)
-   }
+    this.componentCleanup()
+    window.removeEventListener('beforeunload', this.componentCleanup)
+  }
 
   componentCleanup(){
     clearInterval(this.interval)
@@ -85,7 +84,7 @@ class GameOfLife extends React.Component {
       const prevBoard = this.state.board
       const newBoard = this.update()
 
-      if(!!diff(prevBoard, newBoard)){
+      if(diff(prevBoard, newBoard)){
         this.setState({ board: newBoard })
       }
       else {

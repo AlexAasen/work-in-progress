@@ -43,7 +43,7 @@ class GalleryView extends React.Component {
   }
 
   render(){
-    const { activeIdx, prevIdx, list, initial, type } = this.state
+    const { activeIdx, prevIdx, list, initial } = this.state
     const backIdx = (activeIdx - 1) < 0 ? 0 : activeIdx - 1
     const nextIdx = (activeIdx + 1) > (list.length - 1) ? list.length - 1 : activeIdx + 1
     const prevDis = (activeIdx === 0) ? "disabled" : ''

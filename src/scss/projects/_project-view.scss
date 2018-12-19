@@ -1,74 +1,30 @@
 @keyframes prevAnim {
-  0%   {
+  from  {
     opacity: 0;
     left: -100%;
   }
-  20%   {
-    opacity: 0.15;
-    left: -80%;
-  }
-  40%   {
-    opacity: 0.3;
-    left: -60%;
-  }
-  60%   {
-    opacity: 0.5;
-    left: -40%;
-  }
-  80%   {
-    opacity: 0.75;
-    left: -20%;
-  }
-  100% {
-    left: auto;
+  to {
+    left: 0;
     opacity: 1;
   }
 }
 
 @keyframes nextAnim {
-  0%   {
+  from  {
     opacity: 0;
     right: -100%;
   }
-  20%   {
-    opacity: 0.15;
-    right: -80%;
-  }
-  40%   {
-    opacity: 0.3;
-    right: -60%;
-  }
-  60%   {
-    opacity: 0.5;
-    right: -40%;
-  }
-  80%   {
-    opacity: 0.75;
-    right: -20%;
-  }
-  100% {
-    right: auto;
+  to {
+    right: 0;
     opacity: 1;
   }
 }
 
 @keyframes initialAnim {
-  0%   {
+  from   {
     opacity: 0;
   }
-  20%   {
-    opacity: 0.15;
-  }
-  40%   {
-    opacity: 0.3;
-  }
-  60%   {
-    opacity: 0.5;
-  }
-  80%   {
-    opacity: 0.75;
-  }
-  100% {
+  to {
     opacity: 1;
   }
 }
@@ -88,13 +44,13 @@
       max-width: calc(100% - 200px);
       position: relative;
       &.prev{
-        animation: prevAnim .3s ease-out;
+        animation: prevAnim .6s;
       }
       &.next{
-        animation: nextAnim .3s ease-out;
+        animation: nextAnim .6s;
       }
       &.initial{
-        animation: initialAnim .3s ease-out;
+        animation: initialAnim .6s;
       }
     }
     .icon{

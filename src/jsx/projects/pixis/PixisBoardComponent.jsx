@@ -1,16 +1,15 @@
 var React = require('react')
 var { map } = require('underscore')
-var clone = require('clone')
 var PixieBoxComponent = require('./PixieBoxComponent.jsx')
 
 class PixisBoardComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-     board: [],
-     widthDensity: 100,
-     heightDensity: 50,
-     pixelHeight: 9
+      board: [],
+      widthDensity: 100,
+      heightDensity: 50,
+      pixelHeight: 9
     }
 
   }

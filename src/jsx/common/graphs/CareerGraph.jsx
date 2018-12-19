@@ -1,8 +1,9 @@
 const React = require('react')
 const d3 = require('d3')
 const { debounce } = require('underscore')
-const { reRenderDebounce, animationSpeed } = require('constants/base.js')
+const { reRenderDebounce } = require('constants/base.js')
 const { careerSkills } = require('constants/cv')
+const decideOnUpdate = require('js/graphs/decideOnUpdate')
 
 const margin = {
   top: 40,
@@ -29,7 +30,7 @@ class CareerGraph extends React.Component {
     window.removeEventListener("resize", this.dbRender)
   }
 
-  componentDidUpdate(prevProps){
+  componentDidUpdate(){
     if(decideOnUpdate(this.refs["career-graph-holder"], this.lastWidth))
       this.dbRender()
   }
@@ -38,7 +39,7 @@ class CareerGraph extends React.Component {
     const svg = d3.select('.career-graph')
 
     svg.append('g')
-      .attr('class', 'chart-data')
+        .attr('class', 'chart-data')
 
     this.renderGraph()
   }
@@ -52,20 +53,20 @@ class CareerGraph extends React.Component {
         .append('path')
         .attr('class', 'data-entry')
         .attr('d', d3.arc()
-          .innerRadius(0)
-          .outerRadius(d => getDepth(d.value))
-          .startAngle((d, i) => oneDegreeSpan * i)
-          .endAngle((d, i) => oneDegreeSpan * (i + 1))
+            .innerRadius(0)
+            .outerRadius(d => getDepth(d.value))
+            .startAngle((d, i) => oneDegreeSpan * i)
+            .endAngle((d, i) => oneDegreeSpan * (i + 1))
         )
         .attr('fill', d => d.color)
         .attr("transform", "translate(" + ((width - margin.left) / 2) + "," + ((height + margin.top) / 2) + ")")
 
     selection.merge(created)
         .attr('d', d3.arc()
-          .innerRadius(0)
-          .outerRadius(d => getDepth(d.value))
-          .startAngle((d, i) => oneDegreeSpan * i)
-          .endAngle((d, i) => oneDegreeSpan * (i + 1))
+            .innerRadius(0)
+            .outerRadius(d => getDepth(d.value))
+            .startAngle((d, i) => oneDegreeSpan * i)
+            .endAngle((d, i) => oneDegreeSpan * (i + 1))
         )
         .attr('fill', d => d.color)
         .attr("transform", "translate(" + ((width - margin.left) / 2) + "," + ((height + margin.top) / 2) + ")")
@@ -76,7 +77,7 @@ class CareerGraph extends React.Component {
 
   renderGraph(){
     const svg = d3.select('.career-graph')
-                  .attr("width", 0)
+        .attr("width", 0)
 
     const container = this.refs["career-graph-holder"]
     const width = container.offsetWidth
@@ -86,11 +87,10 @@ class CareerGraph extends React.Component {
       return degrees * Math.PI / 180;
     }
     const getDepth = depthVariable => ((height - margin.top) / 20) * depthVariable
-    const radians = 2 * Math.PI
     const oneDegreeSpan = getRadians(360/angleVariable)
 
     svg.attr('height', height)
-       .attr('width', width)
+        .attr('width', width)
 
     const config = {
       svg,

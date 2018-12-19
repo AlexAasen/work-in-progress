@@ -25,7 +25,7 @@ class Row extends React.Component {
   }
 
   render(){
-    const { active, code, rowIdx, row, evaluation, evaluate, gameWon, pegsPerRow } = this.props
+    const { active, code, rowIdx, row, evaluate, gameWon, pegsPerRow } = this.props
 
     return(
       <div className={"row" + (active === rowIdx ? " active" : "")}>

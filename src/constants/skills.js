@@ -14,7 +14,7 @@ module.exports = {
       name: "Interaction design",
       icons: ["icon-heart icon"],
       description: "With a background in game design, my focus lies in creating an enjoyable user-experience. I believe that a good design is one that feels intuitive, one where the user is guided through his/her experience without being told what to do."
-    },
+    }
   ],
   skills: {
     name: "Web development",

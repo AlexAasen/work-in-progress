@@ -1,6 +1,6 @@
 const React = require('react')
 const { map } = require('underscore')
-const { evaluateCode } = require('./utils.js')
+const { evaluateCode } = require('appUtils/mastermindUtils.js')
 
 class ProgressBox extends React.Component {
   evaluate(){
@@ -36,7 +36,7 @@ class ProgressBox extends React.Component {
   }
 
   render(){
-    const { row, active, rowIdx, evaluation } = this.props
+    const { active, rowIdx, evaluation } = this.props
 
     let progress
     if(active < rowIdx) progress = this.lockedEval()

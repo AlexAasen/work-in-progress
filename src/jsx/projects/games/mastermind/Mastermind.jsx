@@ -5,7 +5,7 @@ const Footer = require('common/Footer.jsx')
 const Row = require('./Row.jsx')
 const Peg = require('./Peg.jsx')
 const ColorSelection = require('./ColorSelection.jsx')
-const { generateCode } = require('./utils.js')
+const { generateCode } = require('appUtils/mastermindUtils.js')
 
 class Mastermind extends React.Component {
   constructor(props){
@@ -129,11 +129,11 @@ class Mastermind extends React.Component {
         </div>
       )
     }
+    return null
   }
 
   render(){
-    const { changeActivePage } = this.props
-    const { activeColor, code, showCode } = this.state
+    const { activeColor, showCode } = this.state
 
     return(
       <div className="mastermind">

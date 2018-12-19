@@ -1,11 +1,11 @@
 const React = require('react')
-const EventBus = require('./EventBus.js')
+const EventBus = require('js/EventBus.js')
 
 class PixieBoxComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-     color: null
+      color: null
     }
   }
 

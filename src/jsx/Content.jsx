@@ -10,14 +10,16 @@ const Playground = require('./pages/Playground.jsx')
 const Mastermind = require('./projects/games/mastermind/Mastermind.jsx')
 const GameOfLife = require('./projects/games/gameOfLife/GameOfLife.jsx')
 const Memory = require('./projects/games/memory/Memory.jsx')
-const Spaceshooter = require('./projects/games/spaceshooter/Spaceshooter.jsx')
 
 const Pixis = require('./projects/pixis/Pixis.jsx')
 const Vis = require('./projects/ViS.jsx')
 const Illustration = require('./projects/Illustration.jsx')
 
-const Attributes = require('./projects/graphs/Attributes.jsx') 
+const Attributes = require('./projects/graphs/Attributes.jsx')
 const WindVelocityGraph = require('./projects/graphs/WindVelocityGraph.jsx')
+const CrimesGraph = require('./projects/graphs/CrimesGraph.jsx')
+
+const ColoringBook = require('./projects/random/ColoringBook.jsx')
 
 class Content extends React.Component {
   render(){
@@ -34,10 +36,11 @@ class Content extends React.Component {
         <Route exact path='/playground/pixis' component={Pixis}/>
         <Route exact path='/playground/graphs/attributes' component={Attributes}/>
         <Route exact path='/playground/graphs/windvelocity' component={WindVelocityGraph}/>
+        <Route exact path='/playground/graphs/population' component={CrimesGraph}/>
         <Route exact path='/playground/games/mastermind' component={Mastermind}/>
-        <Route exact path='/playground/games/spaceshooter' component={Spaceshooter}/>
         <Route exact path='/playground/games/game-of-life' component={GameOfLife}/>
         <Route exact path='/playground/games/memory' component={Memory}/>
+        <Route exact path='/playground/random/coloring-book' component={ColoringBook}/>
       </Switch>)
   }
 }

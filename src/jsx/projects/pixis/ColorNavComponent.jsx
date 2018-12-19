@@ -7,7 +7,7 @@ class ColorNavComponent extends React.Component {
     super(props)
 
     this.state = {
-     activeColor: null
+      activeColor: null
     }
   }
 

@@ -2,7 +2,6 @@ const React = require('react')
 const { map, shuffle, isEqual, contains, reject } = require('underscore')
 const Cookies = require('js-cookie')
 const clone = require('clone')
-const { getRandom } = require('js/utils')
 
 class Memory extends React.Component {
   constructor(){

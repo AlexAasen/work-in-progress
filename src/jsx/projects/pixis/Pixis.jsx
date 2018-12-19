@@ -1,17 +1,16 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var HeaderComponent = require('./HeaderComponent.jsx');
-var PixisBoardComponent = require('./PixisBoardComponent.jsx');
-var ColorNavComponent = require('./ColorNavComponent.jsx');
-var EventBus = require('./EventBus.js');
+var React = require('react')
+var HeaderComponent = require('./HeaderComponent.jsx')
+var PixisBoardComponent = require('./PixisBoardComponent.jsx')
+var ColorNavComponent = require('./ColorNavComponent.jsx')
+var EventBus = require('js/EventBus.js')
 
 class Pixis extends React.Component {
   setActiveColor(color){
-    EventBus.setColor(color);
+    EventBus.setColor(color)
   }
 
   handleMouseUp(){
-    EventBus.handleMouseUp();
+    EventBus.handleMouseUp()
   }
 
   render () {
@@ -23,7 +22,7 @@ class Pixis extends React.Component {
           <PixisBoardComponent />
         </div>
       </div>
-    );
+    )
   }
 }
 
