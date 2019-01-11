@@ -19,11 +19,11 @@ function evaluateCode(code, row, pegsPerRow){
     if(code[idx] === color){
       pegMemory[color] = pegMemory[color] ? pegMemory[color] + 1 : 1
       correctGuesses = correctGuesses + 1
-      evaluation[idx] = "white"
+      evaluation[idx] = "black"
     }
   })
   each(row, (color, idx) => {
-    if(evaluation[idx] !== "white"){
+    if(evaluation[idx] !== "black"){
       if(code.indexOf(color) !== -1){
         let numberOfInstances = 0
 
@@ -35,11 +35,11 @@ function evaluateCode(code, row, pegsPerRow){
         //How many have we registered?
         if(pegMemory[color] && (pegMemory[color] < numberOfInstances)){
           pegMemory[color] = pegMemory[color] + 1
-          evaluation[idx] = "black"
+          evaluation[idx] = "white"
         }
         else if(!pegMemory[color]){
           pegMemory[color] = 1
-          evaluation[idx] = "black"
+          evaluation[idx] = "white"
         }
       }
     }

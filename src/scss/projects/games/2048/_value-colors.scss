@@ -1,0 +1,36 @@
+.page-container-2048{
+  .board-entry{
+    .value{
+      &.has-value{
+        background: #dcdce4;
+        &.v-8{
+          background: #92a5d2;
+        }
+        &.v-16{
+          background: #90dec2;
+        }
+        &.v-32{
+          background: #a6d8e8;
+        }
+        &.v-64{
+          background: #86dc72;
+        }
+        &.v-128{
+          background: #c5de42;
+        }
+        &.v-256{
+          background: #debe42;
+        }
+        &.v-512{
+          background: #de9242;
+        }
+        &.v-1024{
+          background: #ca6546;
+        }
+        &.v-2048{
+          background: #b33e3e;
+        }
+      }
+    }
+  }
+}

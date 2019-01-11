@@ -37,7 +37,7 @@ class ColoringBook extends React.Component {
   fetchSvg(callback){
     var request = new XMLHttpRequest()
 
-    request.open("GET", this.availableSvgs[1])
+    request.open("GET", this.availableSvgs[2])
     request.setRequestHeader("Content-Type", "image/svg+xml")
 
     request.addEventListener("load", function(event) {

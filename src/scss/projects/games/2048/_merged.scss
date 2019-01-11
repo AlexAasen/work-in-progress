@@ -1,0 +1,52 @@
+@keyframes merged2048Anim {
+  0% {
+    width: 90px;
+    height: 75px;
+    padding-top: 15px;
+    margin: 0;
+  }
+  50% {
+    width: 100px;
+    height: 85px;
+    padding-top: 20px;
+    margin: -5px;
+  }
+  100% {
+    width: 90px;
+    height: 75px;
+    padding-top: 15px;
+    margin: 0;
+  }
+}
+
+@keyframes fadeout {
+  0%{
+    visibility: visible;
+    opacity: 1;
+  }
+  80%{
+    opacity: .7;
+    visibility: visible;
+  }
+  100%{
+    opacity: .01;
+    visibility: hidden;
+  }
+}
+
+@mixin merged2048(){
+  &.merged{
+    .left{
+      animation: slideLeft var(--duration) cubic-bezier(.62,-0.01,.9,.82), var(--duration) merged2048Anim .25s cubic-bezier(.73,.11,.79,.47);
+    }
+    .right{
+      animation: slideRight var(--duration) cubic-bezier(.62,-0.01,.9,.82), var(--duration) merged2048Anim .25s cubic-bezier(.73,.11,.79,.47);
+    }
+    .up{
+      animation: slideUp var(--duration) cubic-bezier(.62,-0.01,.9,.82), var(--duration) merged2048Anim .25s cubic-bezier(.73,.11,.79,.47);
+    }
+    .down{
+      animation: slideDown var(--duration) cubic-bezier(.62,-0.01,.9,.82), var(--duration) merged2048Anim .25s cubic-bezier(.73,.11,.79,.47);
+    }
+  }
+}

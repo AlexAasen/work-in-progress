@@ -1,0 +1,82 @@
+.page-container-2048{
+  @include flex(column);
+  height: calc(100vh - 75px);
+  .generate-button{
+    border-radius: 4px;
+  }
+  .game-over{
+    position: absolute;
+    top: -50px;
+    font-size: 20px;
+    animation: appear2048 .8s;
+  }
+  .metadata-container{
+    @include flex(row, space-between);
+    margin: auto auto 20px;
+    width: 460px;
+    position: relative;
+    .score, .highscore {
+      @include flex(column);
+      width: 120px;
+      padding: 10px;
+      background: #3d3c4a;
+      border-radius: 4px;
+      color: white;
+      font-size: 18px;
+      line-height: 18px;
+      font-family: $Architect;
+      .header{
+        margin-bottom: 5px;
+      }
+      .value{
+        font-family: $Roboto;
+        font-size: 22px;
+        text-align: right;
+        &.anim-score{
+          animation: appear2048 .4s;
+        }
+      }
+    }
+  }
+  .board-game{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0 0 20px;
+    border: 1px solid black;
+    width: 440px;
+    margin: 0 auto auto;
+    background: #3d3c4a;
+    border-radius: 4px;
+    .board-entry{
+      width: 90px;
+      height: 90px;
+      margin: 0 20px 20px 0;
+      border-radius: 4px;
+      background: #7f7d8c;
+      display: flex;
+      position: relative;
+      @include slide();
+      @include merged2048();
+      .value{
+        font-family: $Architect;
+        font-size: 40px;
+        width: 90px;
+        height: 75px;
+        padding-top: 15px;
+        border-radius: 4px;
+        text-align: center;
+        position: relative;
+        &.appear{
+          animation: appear2048 .5s;
+        }
+        &.merging{
+          position: absolute;
+          top: 0;
+          left: 0;
+          visibility: hidden;
+          animation: fadeout var(--duration) ease-in;
+        }
+      }
+    }
+  }
+}

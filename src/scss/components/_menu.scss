@@ -4,15 +4,32 @@
   transition: all .7s;
   min-height: 60px;
   background: white;
-  .menu-item{
+  .menu-item.home{
+    font-family: $Zilla;
+    font-size: 30px;
+    padding: 6px 0;
+    margin-right:20px;
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+  .menu-item:not(.home){
     padding: 20px 20px 15px;
     @extend .Josefin-sans;
     text-transform: uppercase;
     font-size: 13px;
     color: $primary-color;
     font-weight: bold;
+    &.active{
+      cursor: initial;
+      .line{
+        height: 1px;
+        display: block;
+        margin-top: 6px;
+        background: $primary-color;
+        width: 100%;
+      }
+    }
     &:not(.active){
-      cursor: pointer;
       .line{
         height: 1px;
         display: block;
@@ -45,7 +62,7 @@
 .attributes{
   .menu{
     background: $misty-pink;
-    .menu-item{
+    .menu-item:not(.home){
       &:not(.active){
         &:hover{
           background: rgb(150, 48, 100);
@@ -57,7 +74,7 @@
 .mastermind{
   .menu{
     background: #262525;
-    .menu-item{
+    .menu-item:not(.home){
       &:not(.active){
         &:hover{
           background: #000000;
@@ -73,7 +90,11 @@
     .header-message{
       color: white;
     }
-    .menu-item{
+    .menu-item.home{
+      color: white;
+      padding: 12px 0;
+    }
+    .menu-item:not(.home){
       padding: 24px 20px 15px;
       color: white;
       &:not(.active){

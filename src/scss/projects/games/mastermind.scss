@@ -1,6 +1,6 @@
 .mastermind{
   overflow-y: auto;
-  background: radial-gradient(#63889e 10%, #1d2431 100%);
+  background: radial-gradient(#ccdae4 10%, #17181f 100%);
   .inner-holder{
     min-height: calc(100vh - 422px);
   }
@@ -8,6 +8,7 @@
     text-align: center;
     color: white;
     margin: 60px auto 0;
+    font-family: $Barrio;
   }
   .game-board{
     display: flex;
@@ -28,8 +29,8 @@
           flex-wrap: wrap;
           justify-content: center;
           .evaluation-button{
-            background: #51bf64;
-            color: white;
+            background: white;
+            color: $primary-color;
             width: 100%;
             height: 100%;
             border-radius: 10%;
@@ -37,12 +38,13 @@
             cursor: pointer;
             box-shadow: 1px 2px 1px 0px #262525;
             border: none;
-            transition: all .3s;
+            transition: background .3s;
             &:hover:not(.locked){
-              background: #2f9641;
+              background: #36f193;
             }
             &.locked{
               cursor: initial;
+              color: white;
               background: #3d464c;
               box-shadow: none;
             }
@@ -50,11 +52,13 @@
 
           .progress-peg{
             background: "none";
-            width: 15px;
+            width: 12px;
+            height: 12px;
             margin: 1px 5px;
-            height: 15px;
             border-radius: 50%;
-            box-shadow: inset 1px 1px 5px 0px #1a132d;
+            border: 1px solid #313131;
+            border-right: 2px solid #313131;
+            border-bottom: 2px solid #313131;
           }
         }
       }
@@ -68,17 +72,20 @@
       height: 30px;
       margin: 0 20px;
       border-radius: 50%;
-      box-shadow: inset 1px 1px 5px 0px #1a132d;
+      transition: all .3s;
+      border: 1px solid #313131;
+      border-right: 2px solid #313131;
+      border-bottom: 3px solid #313131;
     }
   }
   .row.active .peg:hover{
-    box-shadow: inset 1px 1px 11px 2px #1a132d;
+    border-color: white;
   }
   .hidden-code{
     width: fit-content;
     margin: 40px auto 25px;
-    border: 4px double #d2d2d2;
-    box-shadow: 1px 2px 1px 0px #262525;
+    border: 2px solid #d2d2d2;
+    border-bottom: 8px solid white;
     border-radius: 10px;
   }
   .colors{
@@ -93,11 +100,15 @@
       height: 40px;
       border-radius: 50%;
       cursor: pointer;
-      box-shadow: inset 1px 1px 1px 0px #1a132d;
+      border: 1px solid #313131;
+      border-right: 2px solid #313131;
+      border-bottom: 3px solid #313131;
       &.active, &:hover {
-        width: 34px;
-        height: 34px;
-        border: 3px double white;
+        width: 36px;
+        height: 36px;
+        border: 3px solid #ffffff;
+        border-right: 5px solid #ffffff;
+        border-bottom: 5px solid #ffffff;
       }
     }
   }
@@ -107,7 +118,9 @@
     position: absolute;
     right: calc(50% - 550px);
     top: calc(50% - 200px);
-    border: 4px double white;
+    border: 1px solid white;
+    border-bottom: 8px solid white;
+    border-right: 4px solid white;
     padding: 20px 40px;
     h3, p{
       color: white;
@@ -122,7 +135,29 @@
         cursor: pointer;
         border: none;
         font-family: 'Josefin sans';
+        &:hover{
+          transition: box-shadow .3s;
+          box-shadow: 1px 2px 0px 1px black;
+        }
       }
     }
   }
 }
+// Hej!
+// Mitt namn är Alex, jag bor tillsammans med min sambo och vår katt Zoey. På min fritid tycker jag om att återskapa mina favorit pussel-spel i React, bekämpa Alliance i World of warcraft samt att spela Heroes of the Storm med mina vänner.
+//
+// Efter att ha läst eran beskrivning tror jag att jag skulle passa in bra hos er.
+//
+// Jag har haft tre stora intressen i mitt liv; spela spel, räkna matte och att måla.
+// Dessa intressen ledde mig till min första utbildning, en kandidatexamen inom speldesign och grafik som gjort mig väldigt medveten om användarupplevelsen i allt jag skapar.
+//
+// Efter att ha upptäckt hur stimulerande och rolig utvecklings-processen är fortsatte jag med att studera systemutveckling med inriktning mot Java. Jag insåg ganska snabbt dock att jag tycker att det är roligast när jag får jobba mer visuellt, och när det väl var dags för webbutveckling i kursprogrammet var jag såld.
+//
+// Men om det är något jag lärt mig de senaste 10 åren så är det att mest av allt, så älskar jag att ge liv till idéer.
+// Jag tycker även om att lära mig nya saker, och att ta mig an nya projekt, vilket i sin tur gjort mig snabblärd. Jag blir barnsligt glad av css-animationer och uppskattar snygg kod samt intuitiva, roliga användarupplevelser.
+//
+// Jag har spenderat de senaste 2.5 åren med att utveckla Vården i Siffror i Javascript med verktyg så som React och Node.
+// Under min tid på projektet har vi hunnit byta ut hela kodbasen ifrån Angular till React, samt tillfört en mängd olika ingångar för att förenkla för våra användare. T.ex finns en ny indikator-sida som låter dig undersöka en specifik indikator. Det finns även rapport-ingångar så att vårdpersonal själva kan skapa sammanställningar av resultat som de sedan kan dela med andra. Samt att det finns en översiktsingång där man kan välja ett urval av indikatorer och enheter och jämföra dessa med varann i en förenklad vy.
+//
+// Varför vill jag jobba hos er?
+// Största anledningen är för att jag vill göra skillnad. Visst är det kul att skapa fina hemsidor, men det är ännu roligare om de faktiskt används för någonting viktigt, så att det man gör spelar roll.

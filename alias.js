@@ -6,6 +6,7 @@ module.exports = {
   resolve: {
     alias: {
       js: path.resolve(APP_DIR + '/js'),
+      api: path.resolve(APP_DIR + '/js/api'),
       appUtils: path.resolve(APP_DIR + '/js/appUtils'),
       jsx: path.resolve(APP_DIR + '/jsx'),
       img: path.resolve(APP_DIR + '/img'),

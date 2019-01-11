@@ -1,0 +1,72 @@
+@keyframes slideLeft{
+  from {
+    z-index: 1;
+    transform: translate(var(--offset), 0px);
+  }
+  to {
+    z-index: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes slideRight{
+  from {
+    z-index: 1;
+    transform: translate(calc(var(--offset) * -1), 0px);
+  }
+  to {
+    z-index: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes slideUp{
+  from {
+    z-index: 1;
+    transform: translate(0px, var(--offset));
+  }
+  to {
+    z-index: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes slideDown{
+  from {
+    z-index: 1;
+    transform: translate(0px, calc(var(--offset) * -1));
+  }
+  to {
+    z-index: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@mixin slide(){
+  &.steps-1{
+    --offset: 110px;
+    --duration: .2s;
+  }
+  &.steps-2{
+    --offset: 220px;
+    --duration: .25s;
+  }
+  &.steps-3{
+    --offset: 330px;
+    --duration: .3s;
+  }
+  &:not(.merged){
+    .left{
+      animation: slideLeft var(--duration) cubic-bezier(.73,.11,.79,.47);
+    }
+    .right{
+      animation: slideRight var(--duration) cubic-bezier(.73,.11,.79,.47);
+    }
+    .up{
+      animation: slideUp var(--duration) cubic-bezier(.73,.11,.79,.47);
+    }
+    .down{
+      animation: slideDown var(--duration) cubic-bezier(.73,.11,.79,.47);
+    }
+  }
+}

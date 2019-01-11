@@ -15,8 +15,7 @@ class ProgressBox extends React.Component {
     return(
       <button className="evaluation-button locked">
         Submit
-      </button>
-    )
+      </button>)
   }
 
   eval(){

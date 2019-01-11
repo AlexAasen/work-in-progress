@@ -1,0 +1,30 @@
+@mixin flex($direction: row, $justify: flex-start, $wrap: nowrap){
+  display: flex;
+  @if($direction != row){
+    flex-direction: $direction;
+  }
+  @if($justify != flex-start){
+    justify-content: $justify;
+  }
+  @if($wrap != nowrap){
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin ellipsis() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin columns($count, $gap, $fill: balance){
+  -webkit-column-count: $count;
+  -moz-column-count: $count;
+  column-count: $count;
+  -webkit-column-gap: $gap;
+  -moz-column-gap: $gap;
+  column-gap: $gap;
+  -webkit-column-fill: $fill;
+  -moz-column-fill: $fill;
+  column-fill: $fill;
+}

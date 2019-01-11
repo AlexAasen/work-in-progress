@@ -1,6 +1,7 @@
 //Mixins
 @import 'mixins/padding';
 @import 'mixins/margin';
+@import 'mixins/base';
 
 //Base
 @import 'base/colors';
@@ -9,7 +10,6 @@
 @import 'base/icons';
 @import 'base/base';
 @import 'base/buttons';
-
 
 //Components
 @import 'components/menu';
@@ -38,10 +38,20 @@
 //projects
 @import 'projects/pixis/pixis';
 @import 'projects/project-view';
+@import 'projects/newsfeed';
+@import 'projects/qa';
+@import 'projects/cv';
+
 //games
 @import 'projects/games/mastermind';
 @import 'projects/games/game-of-life';
 @import 'projects/games/memory';
+@import 'projects/games/2048/merged';
+@import 'projects/games/2048/appear';
+@import 'projects/games/2048/slide';
+@import 'projects/games/2048/value-colors';
+@import 'projects/games/2048/2048';
+
 //graphs
 @import 'projects/graphs/attributes';
 @import 'projects/graphs/wind-velocity';

@@ -1,8 +1,17 @@
 .contact-page{
+  @include flex(row, center);
   text-align: center;
   overflow-y: auto;
   width: 100%;
   margin: auto;
+  .contact-img{
+    height: calc(100vh - 70px);
+  }
+  .contact-info{
+    display: flex;
+    flex-direction: column;
+    margin: auto 150px;
+  }
   .icon-connection{
     font-size: 170px;
     color: $lines;
@@ -14,7 +23,7 @@
     }
   }
   .vertical-line{
-    margin: auto;
+    margin: 0 auto 15px;
   }
   h2{
     font-size: 60px;

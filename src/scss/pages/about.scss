@@ -5,12 +5,22 @@
 }
 .about-page{
   overflow-y: auto;
-  h3{
+  .hashtags{
     margin: 20px 40px 0;
+    .hashtag{
+      font-size: 22px;
+      margin-right: 10px;
+      .hashtag-entry{
+        font-family: $Zilla;
+        text-transform: uppercase;
+        color: $primary-color;
+      }
+    }
   }
   .about-intro{
     margin: 10px 40px 0;
     width: 80%;
+    max-width: 750px;
   }
 }
 .blog-content-holder{
@@ -21,7 +31,7 @@
   .instagram-media{
     transition: all .5s;
     background: white;
-    box-shadow: 0 0 0px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);
+    box-shadow: 2px 3px 6px 0px #9fa7ab;
     margin: 10px 20px 20px;
     padding:0;
     height: 550px;
@@ -58,34 +68,34 @@
       background-size: cover;
       background-position: center;
       &.kitten{
-        background-image: url("/src/img/20160830_162942.jpg");
+        background-image: url("/src/img/about/20160830_162942.jpg");
       }
       &.horizon{
-        background-image: url("/src/img/horizon.jpg");
+        background-image: url("/src/img/about/horizon.jpg");
       }
       &.master-sword{
-        background-image: url("/src/img/20180413_163018.jpg");
+        background-image: url("/src/img/about/20180413_163018.jpg");
       }
       &.desperation{
-        background-image: url("/src/img/desperationsmall_by_alexaasen-d8qj6pp.jpg");
+        background-image: url("/src/img/collage/d8qj6pp-4213a11a-9980-432e-b6d8-718114fd2639.jpg");
       }
       &.link{
-        background-image: url("/src/img/link.jpg");
+        background-image: url("/src/img/about/link.jpg");
       }
       &.eruption{
-        background-image: url("/src/img/eruption_by_alexaasen-da1ells.jpg");
+        background-image: url("/src/img/collage/eruption_by_alexaasen_da1ells-fullview.jpg");
       }
       &.ålesund{
-        background-image: url("/src/img/20171001_125108.jpg");
+        background-image: url("/src/img/about/20171001_125108.jpg");
       }
       &.control{
-        background-image: url("/src/img/control_by_alexaasen-d70u76i.jpg");
+        background-image: url("/src/img/about/control_by_alexaasen-d70u76i.jpg");
       }
       &.teamvalor{
-        background-image: url("/src/img/teamvalor.jpg");
+        background-image: url("/src/img/about/Joy3.jpg");
       }
       &.mountains{
-        background-image: url("/src/img/20171003_114948.jpg");
+        background-image: url("/src/img/about/20171003_114948.jpg");
       }
     }
     .paragraph-link{

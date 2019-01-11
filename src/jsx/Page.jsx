@@ -9,7 +9,7 @@ class Page extends React.Component {
 
     return(
       <div id="page-holder" className={"page " + (activePage === "/about" ? "about" : "")}>
-        <Menu />
+        <Menu activePage={activePage}/>
         <Content />
       </div>)
   }

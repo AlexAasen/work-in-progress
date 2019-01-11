@@ -25,9 +25,12 @@ const mathRadians = (degrees) => {
   return degrees * Math.PI / 180;
 }
 
+const isEdgeOrIE11 = typeof window !== "undefined" && !!window.MSInputMethodContext
+
 module.exports = {
   getISODate,
   getRandom,
   mathRadians,
-  getTranslatedMonth
+  getTranslatedMonth,
+  isEdgeOrIE11
 }

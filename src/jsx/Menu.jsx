@@ -20,6 +20,10 @@ class Menu extends React.Component {
   render(){
     return(
       <ul className="menu" id="main-nav-menu">
+        <Link to={"/playground"}
+          key={"home"}
+          className="menu-item home">&nbsp;&nbsp;Alex Aasen &nbsp;&nbsp;
+        </Link>
         {this.getMenuItems()}
         <span className="header-message">Under construction, feel free to browse&nbsp;&nbsp;<span>❤</span></span>
       </ul>)

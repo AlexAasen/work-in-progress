@@ -1,7 +1,7 @@
 const React = require('react')
 const { map } = require('underscore')
-const Footer = require('common/Footer.jsx')
-const { entries } = require('constants/hobbies.js')
+const Footer = require('common/Footer')
+const { entries } = require('constants/hobbies')
 
 class AboutMe extends React.Component {
   constructor(props){
@@ -65,9 +65,11 @@ class AboutMe extends React.Component {
   render(){
     return(
       <div className="about-page" id="about-page">
-        <h3>
-          #Hobbies, #Loves, #Life
-        </h3>
+        <div className="hashtags">
+          <span className="hashtag">#<span className="hashtag-entry">Hobbies</span></span>
+          <span className="hashtag">#<span className="hashtag-entry">Loves</span></span>
+          <span className="hashtag">#<span className="hashtag-entry">Life</span></span>
+        </div>
         <p className="about-intro">
           I live together with my boyfriend and our cat Zoey in Stockholm, Sweden. My spare time is spent painting and trying to be the very best at Heroes of the Storm while Zoey tries to eat my mouse cord.
           The main reason I got interested in the art of programming is that I love to bring ideas to life. I also enjoy solving the various problems that occur during the development process.

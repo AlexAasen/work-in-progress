@@ -10,25 +10,26 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
     "clone": "^2.1.1",
     "css-loader": "^0.28.4",
     "d3": "^4.10.2",
     "deep-diff": "^1.0.1",
     "express": "^4.13.3",
+    "file-saver": "^2.0.0",
+    "html2canvas": "^1.0.0-alpha.12",
     "js-cookie": "^2.2.0",
     "npm": "^6.1.0",
     "pixi.js": "^4.8.1",
-    "bluebird": "^3.5.0",
-    "html2canvas": "^1.0.0-alpha.10",
+    "query-string": "^4.2.3",
     "ramda": "^0.26.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.3.1",
+    "react-transition-group": "^2.0.2",
     "underscore": "^1.8.3",
     "url-loader": "^0.5.9",
-    "xhr": "^2.4.1",
-    "query-string": "^4.2.3",
-    "react-transition-group": "^2.0.2"
+    "xhr": "^2.4.1"
   },
   "engines": {
     "node": "8.9.4"
